@@ -3,7 +3,7 @@ const CardTestimonial = ({ item, index }) => {
   const zOrders = ["z-10", "z-20", "z-30", "z-20", "z-10"];
   return (
     <div
-      className={`w-[300px] relative p-2 bg-white shadow-md relative flex flex-col rounded-2xl 
+      className={`w-[200px] xl:w-[300px] relative p-2 bg-white shadow-md relative flex flex-col rounded-2xl 
   cursor-pointer transition-all duration-300 
   hover:z-50 hover:scale-105 hover:-translate-y-2
   ${zOrders[index]}`}
@@ -13,7 +13,7 @@ const CardTestimonial = ({ item, index }) => {
         src={item.image}
         alt={item.title}
         loading="lazy"
-        className="w-full h-[250px] rounded-2xl object-cover shrink-0"
+        className="h-[170px] w-full xl:h-[250px] rounded-2xl object-cover shrink-0"
       />
        
         <span className="absolute text-sm top-4 right-4 text-white rounded-full border-y border-white/40 bg-white/10 px-4 py-1 backdrop-blur-xs">

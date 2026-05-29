@@ -2,25 +2,25 @@ import footer from "../assets/footer.webp";
 import logo from "../assets/logo.svg";
 const Footer = () => {
   return (
-    <footer className="relative flex flex-col justify-between h-screen text-sm overflow-hidden">
+    <footer className="relative mt-24 flex flex-col justify-between h-[120vh] text-sm overflow-hidden">
       <img
         src={footer}
         alt=""
         loading="lazy"
         className="absolute inset-0 w-full h-full object-cover object-bottom"
       />
-      <div className="z-10 flex p-[128px] text-white flex-col items-center gap-3 text-center">
-        <h1 className="text-5xl font-normal">
-          Uncover unique destinations, <br /> tailored just for you
+      <div className="z-10 mt-12 flex p-4 xl:p-[128px] text-white flex-col items-center gap-3 text-center">
+        <h1 className="text-4xl  xl:text-6xl font-normal">
+          Uncover unique destinations, tailored just for you
         </h1>
         <span>
           At Saujana, we create personalized trips to match your passions.
         </span>
       </div>
 
-      <div className="absolute bottom-0 px-[128px] z-10 border-white/40 border-y bg-white/10 backdrop-blur-xs text-white">
-        <div className="items-stretch py-12 border-b flex items-start justify-between gap-7">
-          <div className="flex flex-col justify-between ">
+      <div className="absolute bottom-0 px-4 xl:px-[128px] z-10 border-white/40 border-y bg-white/10 backdrop-blur-xs text-white">
+        <div className="items-stretch py-12 border-b flex flex-col xl:flex-row items-start justify-between gap-7">
+          <div className="flex flex-col gap-3 justify-between ">
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
                 <img src={logo} className="w-8" alt="" />
@@ -31,7 +31,25 @@ const Footer = () => {
                 voluptatibus cumque assumenda, repellat suscipit.
               </span>
             </div>
-            <div>
+
+            <div className="flex xl:hidden flex-col gap-3.5 w-full">
+              <span className="font-semibold">Stay in the loop</span>
+              <span>
+                Get travel inspo, exclusive deals, and the latest Saujana
+                updates straight to your inbox
+              </span>
+              <div className="flex items-center gap-2">
+                <input
+                  className="border-white/40 border-y bg-white/10 backdrop-blur-xs text-white px-4 py-2 rounded-4xl focus:outline-none"
+                  type="text"
+                  placeholder="Enter your email address"
+                />
+                <button className="px-4 py-2 rounded-4xl bg-white font-normal text-black">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+            <div className="hidden xl:block">
               <ul className="flex items-center gap-2 mt-auto">
                 <li className="bg-white h-10 w-10 rounded-full flex  items-center justify-center">
                   <IgLogo />
@@ -49,8 +67,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex items-start gap-14">
-            <div className="w-fit whitespace-nowrap">
+          <div className="flex flex-col xl:flex-row items-start gap-6 xl:gap-14">
+            <div className="flex gap-6 xl:gap-0 items-start w-fit whitespace-nowrap ">
               <ul className="flex flex-col gap-3.5">
                 <li className="mb-3 font-semibold">Explore</li>
                 <li>Home</li>
@@ -59,8 +77,7 @@ const Footer = () => {
                 <li>Favorite trip</li>
                 <li>How it works</li>
               </ul>
-            </div>
-            <div className="w-fit whitespace-nowrap ">
+
               <ul className="flex flex-col gap-3.5">
                 <li className="mb-3 font-semibold">Support</li>
                 <li>About Saujana</li>
@@ -68,7 +85,7 @@ const Footer = () => {
                 <li>Faqs</li>
               </ul>
             </div>
-            <div className="flex flex-col gap-3.5 w-full">
+            <div className="hidden xl:flex flex-col gap-3.5 w-full">
               <span className="mb-3 font-semibold">Stay in the loop</span>
               <span>
                 Get travel inspo, exclusive deals, and the latest Saujana
@@ -84,6 +101,22 @@ const Footer = () => {
                   Subscribe
                 </button>
               </div>
+            </div>
+            <div className="block xl:hidden">
+              <ul className="flex items-center gap-2 mt-auto">
+                <li className="bg-white h-10 w-10 rounded-full flex  items-center justify-center">
+                  <IgLogo />
+                </li>
+                <li className="bg-white h-10 w-10 rounded-full flex  items-center justify-center">
+                  <TiktokLogo />
+                </li>
+                <li className="bg-white h-10 w-10 rounded-full flex  items-center justify-center">
+                  <XLogo />
+                </li>
+                <li className="bg-white h-10 w-10 rounded-full flex  items-center justify-center">
+                  <FbLogo />
+                </li>
+              </ul>
             </div>
           </div>
         </div>

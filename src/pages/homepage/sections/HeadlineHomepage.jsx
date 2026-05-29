@@ -13,7 +13,7 @@ const HeadlineHomepage = () => {
   const activeDestination = HeadlineCarouselData[bgIndex];
 
   return (
-    <section className="relative overflow-hidden 2xl:p-[72px] min-h-screen">
+    <section className="relative overflow-hidden p-4 2xl:p-[72px] min-h-screen">
       {/* Background Image */}
       <img
         src={activeDestination.image}
@@ -34,13 +34,13 @@ const HeadlineHomepage = () => {
             <h3>Lorem ipsum dolor sit.</h3>
           </div>
 
-          <h1 className="text-6xl mt-7 text-white font-extralight leading-tight">
+          <h1 className="text-4xl xl:text-6xl mt-7 text-white font-extralight leading-tight">
             Explore {activeDestination.title} <br />
             <span className="font-normal">Unforgettable Experience</span>
           </h1>
         </div>
 
-        <div className="mt-24 flex items-end justify-between gap-44">
+        <div className="mt-12 xl:mt-24 flex flex-col-reverse xl:flex-row items-end justify-between gap-12 xl:gap-44">
           <SocialProofCard />
 
           <BottomCarousel

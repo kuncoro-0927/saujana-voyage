@@ -9,25 +9,25 @@ const Card = ({ item }) => {
       />
 
       {item.badge && (
-        <span className="absolute text-sm top-2 right-2 text-white rounded-full border-y border-white/40 bg-white/10 px-4 py-1 backdrop-blur-xs">
+        <span className="absolute text-base top-2 right-2 text-white rounded-full border-y border-white/40 bg-white/10 px-4 py-1 backdrop-blur-xs">
           {item.badge}
         </span>
       )}
       {/* CONTENT */}
       <div className="py-4 flex flex-col gap-y-2 flex-1">
-        <span className=" text-xs font-medium">{item.province}</span>
-        <h3 className="text-base font-semibold text-gray-800">{item.title}</h3>
-        <span className=" text-xs font-normal -mt-1 text-[#363636]">{item.description}</span>
-        <span className="flex font-normal text-xs text-[#363636] items-start gap-2">
+        <span className=" text-sm font-medium">{item.province}</span>
+        <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
+        <span className=" text-base font-normal -mt-1 text-[#363636]">{item.description}</span>
+        <span className="flex font-normal text-base text-[#363636] items-start gap-2">
           <RatingIcon /> {item.rating} rating
         </span>
 
-        <span className="text-xs font-normal flex text-[#363636] items-start gap-2">
+        <span className="text-base font-normal flex text-[#363636] items-start gap-2">
           <DurationIcon /> {item.duration}
         </span>
-        <div className="mt-auto pt-4 flex items-end justify-between gap-2">
-          <span className="font-semibold text-base  w-fit">
-            IDR {item.price}/ <span className="text-sm font-light">person</span>
+        <div className="xl:mt-auto xl:pt-4 flex items-end justify-between gap-2">
+          <span className="font-semibold text-lg  w-fit">
+            IDR {item.price}/ <span className="text-base font-light">person</span>
           </span>
 
           <div className="text-sm flex items-center gap-x-1 w-fit shrink-0 rounded-full border bg-transparent pl-4 pr-1 py-1">

@@ -5,9 +5,9 @@ const FeaturedPackage = () => {
   const [activeId, setActiveId] = useState(1); // default aktif id 1
 
   return (
-    <section className="xl:px-[128px] mt-24">
+    <section className="xl:px-[128px] px-4 mt-24">
       <div className="flex flex-col items-center gap-3 text-center">
-        <h1 className="text-5xl font-normal">
+        <h1 className="text-4xl xl:text-6xl font-normal">
           Discover the Best Travel Packages <br /> of the Month
         </h1>
         <span>
@@ -16,15 +16,18 @@ const FeaturedPackage = () => {
         </span>
       </div>
 
-      <div className="flex items-center gap-5 mt-12">
+      <div className="flex flex-col xl:flex-row bg-amber-50items-center gap-5 mt-12">
         {HeadlineCarouselData.filter((item) => [1, 3, 5].includes(item.id)).map(
           (item) => (
             <div
               key={item.id}
               onMouseEnter={() => setActiveId(item.id)}
-              className={`relative overflow-hidden rounded-2xl transition-all duration-500 h-[460px] ${
-                activeId === item.id ? "w-1/2" : "w-1/3"
-              }`}
+              className={`relative overflow-hidden rounded-2xl transition-all duration-500 
+    ${
+      activeId === item.id
+        ? "h-[380px] md:h-full xl:w-1/2"
+        : "h-[180px] md:h-full xl:w-1/3"
+    }`}
             >
               <img
                 src={item.image}
@@ -33,7 +36,6 @@ const FeaturedPackage = () => {
                 className="w-full h-full object-cover"
               />
 
-           
               {/* Teks — hanya muncul kalau aktif */}
               <div
                 className={`absolute bottom-6 left-6 right-6 text-white p-5 rounded-xl border-white/40 border-y bg-white/10 backdrop-blur-xs text-white overflow-hidden transition-all duration-300 ${
@@ -73,13 +75,13 @@ const FeaturedPackage = () => {
                 <span className="flex items-center mt-2 gap-2 text-sm">
                   <DurationIcon /> {item.duration}
                 </span>
-                <div className="flex items-end justify-between mt-2">
+                <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mt-4 lg:mt-2">
                   <span className="font-normal text-lg">
                     IDR {item.pricePackage}/
                     <span className="font-extralight text-sm">person</span>
                   </span>
 
-                  <div className="flex items-center mt-4">
+                  <div className="flex items-center mt-2 lg:mt-4">
                     <div className="flex items-center gap-x-3 rounded-full text-sm border-y border-white/40 bg-white/10 px-4 py-1 backdrop-blur-xs">
                       <span className="text-white">Book Now</span>
                     </div>
